@@ -1,0 +1,13 @@
+version: '3'
+services:
+  web:
+    build: ./server
+    command: npm run api_blog
+    volumes: 
+      - ./server:/usr/app
+      - /usr/app/node_modules
+    ports:
+      - "4000:6000"
+    environment:
+      PORT: 6000
+      
