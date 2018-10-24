@@ -1,17 +1,15 @@
-import * as express from 'express';
+import express from 'express';
 
-const app = express();
+const app = express.Router();
 const port = process.env.PORT || 3000;
 
 app.listen(port, (err) => {
-  if(err) {
+  if (err) {
     console.log(err);
   }
   console.log(`The server is listening on port ${port}`);
 });
 
 app.get('/', (req, res) => {
-    res.send('HELLO WORLD !');
+  res.send('HELLO WORLD !');
 });
-
-
