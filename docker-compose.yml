@@ -2,7 +2,7 @@ version: '3'
 services:
   web:
     build: ./server
-    command: npm run api_blog
+    command: yarn run api_blog
     volumes: 
       - ./server:/usr/app
       - /usr/app/node_modules
