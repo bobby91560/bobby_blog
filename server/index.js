@@ -1,5 +1,5 @@
-const express = require('express');
-const bodyParser = require('body-parser');
+import express from 'express';
+import bodyParser from 'body-parser';
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -14,6 +14,14 @@ app.listen(port, (err) => {
 
 app.get('/', (req, res) => {
   res.send('HELLO WORLD !');
+});
+
+app.get('/', (req, res) => {
+  const users = {
+    username: 'bobby',
+    password: 'lool',
+  };
+  res.send(users);
 });
 
 app.post('/users', jsonParser, (req, res) => {
